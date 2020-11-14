@@ -25,7 +25,7 @@ struct ApiClient<M:Decodable>: Fetcher {
                 }
                 EndPoint.page.incr()
             case .failure(let error):
-                fatalError(error.localizedDescription)
+                print(error.localizedDescription)
             }
         }
     }

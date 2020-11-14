@@ -33,10 +33,14 @@ enum EndPoint {
                 URLQueryItem(name: "api_key", value: EndPoint.apiKey)
             ]
             return urlComponents.url!
+        case .youtube(let key):
+            return URL(string: "https://www.youtube.com/embed/\(key)")!
         }
+        
     }
     
     case movieList
     case video(String)
+    case youtube(String)
     
 }

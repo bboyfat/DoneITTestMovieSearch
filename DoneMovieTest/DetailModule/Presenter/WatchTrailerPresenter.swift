@@ -35,7 +35,7 @@ class WatchTrailerPresenter: WatchTrailerPresenterProtocol {
         isFavorite()
         ApiClient<VideoResponse>().fetch(endPoint: .video("\(id)")) {[unowned self] (video) in
             guard let key = video.results.first?.key else {return}
-            guard let url = URL(string: "https://www.youtube.com/embed/\(key)") else {return}
+            let url = EndPoint.youtube(key).finalUrl
             self.output?.update(.finishWithSuccsses(.trailer(url)))
         }
         
