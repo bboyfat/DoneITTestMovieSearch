@@ -7,12 +7,10 @@
 
 import Foundation
 
-
-
 enum ViewState {
     case loading
     case finishWithSuccsses(SuccessType)
-    case failure(String)
+    case failure(String?)
 }
 
 enum SuccessType {
@@ -43,8 +41,9 @@ class MovieListPresenter: ListPresenterProtocol {
     weak var output: PresenterOutput?
     
     func loadMovies() {
-        ApiClient<APIResponse>().fetch(endPoint: .movieList) {[unowned self] (answer) in
-            self.output?.update(.finishWithSuccsses(.movies(answer.results)))
+        ApiClient<APIResponse>().fetch(endPoint: .movieList) {[unowned self] (answer, error) in
+            guard error == nil else {self.handleError(error?.localizedDescription); return}
+            self.output?.update(.finishWithSuccsses(.movies(answer?.results ?? [])))
         }
     }
     
@@ -61,6 +60,10 @@ class MovieListPresenter: ListPresenterProtocol {
             guard let self = self else {return}
             self.output?.update(.finishWithSuccsses(.showFavorites(self.dataBase.fetch())))
         }
+    }
+    
+    private func handleError(_ message: String?) {
+        output?.update(.failure(message))
     }
     
     required init(_ router: Router?, output: PresenterOutput?) {

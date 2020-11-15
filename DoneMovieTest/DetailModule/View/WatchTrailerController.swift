@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 
-class WatchTrailerController: UIViewController {
+class WatchTrailerController: StateViewController {
     
     @IBOutlet var watchView: WatchTrailerView!
     @IBOutlet var webView: WKWebView!
@@ -17,12 +17,12 @@ class WatchTrailerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.getURL()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         watchView.title.text = presenter?.getTitle() ?? ""
+        presenter?.getURL()
     }
     
     public func setPresenter(_ presenter: WatchTrailerPresenterProtocol?) {
@@ -50,6 +50,7 @@ class WatchTrailerController: UIViewController {
 
 extension WatchTrailerController: PresenterOutput {
     func update(_ viewState: ViewState) {
+        super.viewState = viewState
         switch viewState {
         case .finishWithSuccsses(let succsessType):
             switch succsessType {

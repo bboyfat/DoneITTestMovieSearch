@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderController" customModule="Din_Din" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicatorView" destination="xXo-2X-rjZ" id="anM-gb-S0Z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXo-2X-rjZ" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="puC-OL-bEW"/>
+                        <constraint firstAttribute="width" secondItem="xXo-2X-rjZ" secondAttribute="height" multiplier="1:1" id="tVc-Rg-e3K"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballRotateChase"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0039215686274509803" blue="0.16862745098039217" alpha="0.40669014084507044" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="xXo-2X-rjZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6dV-HM-Ojg"/>
+                <constraint firstItem="xXo-2X-rjZ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ytf-1Z-SGR"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="100.29985007496252"/>
+        </view>
+    </objects>
+</document>

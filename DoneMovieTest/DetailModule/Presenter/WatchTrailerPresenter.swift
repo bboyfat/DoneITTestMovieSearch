@@ -31,14 +31,22 @@ class WatchTrailerPresenter: WatchTrailerPresenterProtocol {
     }
     
     func getURL() {
-        guard let id = m?.id else {return}
+        guard let id = m?.id else {handleError("Can't get video's id"); return}
+        output?.update(.loading)
         isFavorite()
-        ApiClient<VideoResponse>().fetch(endPoint: .video("\(id)")) {[unowned self] (video) in
-            guard let key = video.results.first?.key else {return}
+        ApiClient<VideoResponse>().fetch(endPoint: .video("\(id)")) {[unowned self] (video, error) in
+            guard error == nil,
+                  let key = video?.results.first?.key
+            else {self.handleError(error?.localizedDescription); return}
+            
             let url = EndPoint.youtube(key).finalUrl
             self.output?.update(.finishWithSuccsses(.trailer(url)))
         }
         
+    }
+    
+    private func handleError(_ message: String?) {
+        output?.update(.failure(message))
     }
     
     func isFavorite() {

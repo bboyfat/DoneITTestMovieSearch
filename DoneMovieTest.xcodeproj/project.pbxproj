@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C233410B25614DC9007F15DC /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = C233410A25614DC9007F15DC /* NVActivityIndicatorView */; };
+		C233410D25614DC9007F15DC /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = C233410C25614DC9007F15DC /* NVActivityIndicatorViewExtended */; };
+		C233411325614DEE007F15DC /* LoaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C233411125614DEE007F15DC /* LoaderController.xib */; };
+		C233411425614DEE007F15DC /* LoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233411225614DEE007F15DC /* LoaderController.swift */; };
+		C233411A25614E6E007F15DC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233411925614E6E007F15DC /* BaseViewController.swift */; };
 		C23F72F6255EF57700918DB1 /* WatchTrailerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F72F5255EF57700918DB1 /* WatchTrailerView.swift */; };
 		C23F72FF255EF7A700918DB1 /* WatchTrailerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F72FE255EF7A700918DB1 /* WatchTrailerPresenter.swift */; };
 		C23F7308255EFA8600918DB1 /* TrailerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F7307255EFA8600918DB1 /* TrailerModel.swift */; };
@@ -67,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C233411125614DEE007F15DC /* LoaderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderController.xib; sourceTree = "<group>"; };
+		C233411225614DEE007F15DC /* LoaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderController.swift; sourceTree = "<group>"; };
+		C233411925614E6E007F15DC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C23F72F5255EF57700918DB1 /* WatchTrailerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTrailerView.swift; sourceTree = "<group>"; };
 		C23F72FE255EF7A700918DB1 /* WatchTrailerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTrailerPresenter.swift; sourceTree = "<group>"; };
 		C23F7307255EFA8600918DB1 /* TrailerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerModel.swift; sourceTree = "<group>"; };
@@ -117,9 +125,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C233410B25614DC9007F15DC /* NVActivityIndicatorView in Frameworks */,
 				C2D897DA255ED38500A2E098 /* Nuke in Frameworks */,
 				C24017A2255E8D110042C212 /* Alamofire in Frameworks */,
 				C24017C1255EADE50042C212 /* Reachability in Frameworks */,
+				C233410D25614DC9007F15DC /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +196,8 @@
 		C24017E0255EB6460042C212 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C233411225614DEE007F15DC /* LoaderController.swift */,
+				C233411125614DEE007F15DC /* LoaderController.xib */,
 				C24017D0255EAEDA0042C212 /* InternetConnectionController.swift */,
 				C24017D1255EAEDA0042C212 /* InternetConnectionController.xib */,
 				C24017CF255EAEDA0042C212 /* InternetConnectionView.swift */,
@@ -360,6 +372,7 @@
 			children = (
 				C24A7EC8255E7AF200C4CB2C /* AppDelegate.swift */,
 				C24A7ECA255E7AF200C4CB2C /* SceneDelegate.swift */,
+				C233411925614E6E007F15DC /* BaseViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -401,6 +414,8 @@
 				C24017A1255E8D110042C212 /* Alamofire */,
 				C24017C0255EADE50042C212 /* Reachability */,
 				C2D897D9255ED38500A2E098 /* Nuke */,
+				C233410A25614DC9007F15DC /* NVActivityIndicatorView */,
+				C233410C25614DC9007F15DC /* NVActivityIndicatorViewExtended */,
 			);
 			productName = DoneMovieTest;
 			productReference = C24A7EC5255E7AF200C4CB2C /* DoneMovieTest.app */;
@@ -477,6 +492,7 @@
 				C24017A0255E8D110042C212 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C24017BF255EADE50042C212 /* XCRemoteSwiftPackageReference "Reachability" */,
 				C2D897D8255ED38500A2E098 /* XCRemoteSwiftPackageReference "Nuke" */,
+				C233410925614DC9007F15DC /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = C24A7EC6255E7AF200C4CB2C /* Products */;
 			projectDirPath = "";
@@ -494,6 +510,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C233411325614DEE007F15DC /* LoaderController.xib in Resources */,
 				C2D897E1255ED8C100A2E098 /* WatchTrailerController.xib in Resources */,
 				C2D897D1255EC4B100A2E098 /* InternetConnectionController.xib in Resources */,
 				C24A7F09255E847000C4CB2C /* MovieListController.xib in Resources */,
@@ -530,6 +547,7 @@
 				C2D897C4255EBEA800A2E098 /* Assembly.swift in Sources */,
 				C24A7F08255E847000C4CB2C /* MovieListController.swift in Sources */,
 				C24017BB255EA8F40042C212 /* Presenter.swift in Sources */,
+				C233411A25614E6E007F15DC /* BaseViewController.swift in Sources */,
 				C24017B1255E9B5C0042C212 /* MovieListView.swift in Sources */,
 				C24017D2255EAEDB0042C212 /* InternetConnectionController.swift in Sources */,
 				C24017D3255EAEDB0042C212 /* InternetConnectionView.swift in Sources */,
@@ -544,6 +562,7 @@
 				C23F7308255EFA8600918DB1 /* TrailerModel.swift in Sources */,
 				C23F72FF255EF7A700918DB1 /* WatchTrailerPresenter.swift in Sources */,
 				C24A7F2E255E884F00C4CB2C /* TableView+Register.swift in Sources */,
+				C233411425614DEE007F15DC /* LoaderController.swift in Sources */,
 				C24A7F11255E875F00C4CB2C /* MovieListManager.swift in Sources */,
 				C24A7F19255E880A00C4CB2C /* UIImageView + load.swift in Sources */,
 				C24A7F23255E882300C4CB2C /* UIView+Reuse.swift in Sources */,
@@ -887,6 +906,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C233410925614DC9007F15DC /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 		C24017A0255E8D110042C212 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -914,6 +941,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C233410A25614DC9007F15DC /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C233410925614DC9007F15DC /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		C233410C25614DC9007F15DC /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C233410925614DC9007F15DC /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
 		C24017A1255E8D110042C212 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C24017A0255E8D110042C212 /* XCRemoteSwiftPackageReference "Alamofire" */;
